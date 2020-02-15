@@ -6,8 +6,8 @@ def dispLabel():
 root = tk.Tk()
 root.geometry("200x100")
 
-lbl = tk.Label(text="LABEL")
-btn = tk.Button(text="PUSH", command=dispLabel)
+lbl = tk.Label(text="")
+btn = tk.Button(text="클릭하세요", command=dispLabel)
 
 lbl.pack()
 btn.pack()
