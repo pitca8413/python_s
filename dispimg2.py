@@ -5,9 +5,10 @@ import PIL.ImageTk
 
 def dispPhoto(path):
     newImage = PIL.Image.open(path).resize((200, 200))
+    gImage = PIL.Image.open(path).convert("L").resize( (32, 32) ).resize( (300, 300) )
 
     # 이미지 레이블에 출력하기
-    imageData = PIL.ImageTk.PhotoImage(newImage)
+    imageData = PIL.ImageTk.PhotoImage(gImage)
     imageLabel.configure(image=imageData)
     imageLabel.image = imageData
 
